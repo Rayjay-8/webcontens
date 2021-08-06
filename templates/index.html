@@ -1,0 +1,35 @@
+<!doctype html>
+<title>Flaskr</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+{% from "child.html" import input,newComponent with context %}
+{% include 'table.html' %}
+
+
+<nav>
+  <h1>Flaskr</h1>
+</nav>
+<section class="content">
+ 
+
+<p>{{ input('username') }}</p>
+<p>{{ input('password', type='password') }}</p>
+{{ newComponent('Insert Text') }}
+
+</section>
